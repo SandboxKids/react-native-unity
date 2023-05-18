@@ -54,6 +54,8 @@ static id<RNUnityFramework> Unity_ufw;
 
     [[self ufw] runEmbeddedWithArgc: gArgc argv: array appLaunchOpts: applaunchOptions];
 
+    [[[ufw appController] window] setWindowLevel:UIWindowLevelNormal - 1];
+
     return self.ufw;
 }
 
